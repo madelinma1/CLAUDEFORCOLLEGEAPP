@@ -10,6 +10,19 @@ system* with AI woven into every surface.
 This repository is a faithful implementation of the **"Mission Control"** design
 direction from the design handoff, built in the target production stack.
 
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmadelinma1%2Fclaudeforcollegeapp&env=ANTHROPIC_API_KEY&envDescription=Optional%20%E2%80%94%20enables%20live%20Claude%20answers.%20Leave%20blank%20to%20use%20built-in%20offline%20fallbacks.&project-name=ai-cos&repository-name=ai-cos)
+
+One click deploys AI-COS to Vercel (any Vercel account works — it's independent
+of the repo owner). Framework auto-detects as Next.js; no extra config needed.
+
+- **`ANTHROPIC_API_KEY`** is optional. Set it for live Claude responses; leave it
+  blank and every AI surface falls back to its built-in offline answer.
+- The button deploys the repository's **default branch**, so merge this work to
+  the default branch first — or use [vercel.com/new](https://vercel.com/new)
+  → *Import* and pick the `claude/design-implementation-tv44c8` branch manually.
+
 ## Stack
 
 - **Framework:** Next.js (App Router) + React + TypeScript
