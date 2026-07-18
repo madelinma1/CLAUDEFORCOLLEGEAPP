@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Design tokens — light theme is the default set on :root. The dark theme is
+ * applied by setting [data-theme="dark"], which the theme toggle flips. Both
+ * palettes come straight from the Mission Control design handoff.
+ */
+:root {
+  --bg: #efe9db;
+  --surface: #ffffff;
+  --surface2: #f4efe4;
+  --ink: #221d16;
+  --ink2: #4c453a;
+  --muted: #8a8071;
+  --line: #e4dccc;
+  --hair: #d8cfbc;
+  --aA: #1f4a3d;
+  --aAsoft: #e3ece6;
+  --aB: #2a3f66;
+  --aBsoft: #e6eaf3;
+  --gold: #a1741f;
+  --goldsoft: #f0e5c9;
+  --rose: #9a4a3c;
+  --rosesoft: #f2e0db;
+  --shadow: 0 1px 2px rgba(34, 29, 22, 0.05), 0 12px 30px rgba(34, 29, 22, 0.07);
+}
+
+[data-theme="dark"] {
+  --bg: #13110c;
+  --surface: #1d1a13;
+  --surface2: #262218;
+  --ink: #f1ebdd;
+  --ink2: #cbc2b0;
+  --muted: #8e8473;
+  --line: #322d22;
+  --hair: #3a3427;
+  --aA: #6fb89a;
+  --aAsoft: #1b2c25;
+  --aB: #94aadc;
+  --aBsoft: #1b2334;
+  --gold: #d7a748;
+  --goldsoft: #2c2614;
+  --rose: #cd7c6e;
+  --rosesoft: #2e1c18;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 16px 36px rgba(0, 0, 0, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-hanken), "Hanken Grotesk", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+::selection {
+  background: rgba(42, 63, 102, 0.18);
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Themed scrollbar to match the paper surfaces */
+.cos-scroll::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+.cos-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 9px;
+  border: 2px solid var(--bg);
+}
+.cos-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rail-nav {
+  scrollbar-width: none;
+}
+.rail-nav::-webkit-scrollbar {
+  display: none;
+}
